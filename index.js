@@ -18,3 +18,9 @@ const pool = new Pool({
     database: 'mahasiswa',
     password: '12334',    //sesuaikan password masing2
     port: 5432,
+})
+
+app.get('/', (req, res, next) => {
+    console.log("TEST DATA : ");
+    pool.query('Select * from biodata')
+    
